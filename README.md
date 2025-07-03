@@ -8,17 +8,18 @@ This project demonstrates how to build, run, and manage a Node.js backend with M
 
 ## 📁 Project Structure
 
-docker-node-mongo-app-project/
-│
+docker-node-mongo-app/
 ├── backend/
-│ ├── Dockerfile
-│ ├── server.js
-│ ├── models/
-│ │ └── User.js
-│ ├── package.json
-│ └── package-lock.json
+│   ├── Dockerfile
+│   ├── server.js
+│   ├── models/
+│   │   └── User.js
+│   ├── package.json
+│   └── package-lock.json
+├── .gitignore
+├── README.md
 ├── docker-compose.yml
-└── README.md
+├── node-mongo-api.postman_collection.json
 
 
 ---
@@ -74,7 +75,13 @@ Open Postman
 
 Click Import
 
-Select the file:  postman_collection.postman_collection.jsonpostman_collection.json
+Select the file:  node-mongo-api.postman_collection.json
+
+You can import this collection into Postman and test:
+- `GET /users`
+- `POST /users`
+- `PUT /users/:id`
+- `DELETE /users/:id`
 
 Start testing your endpoints!
 
@@ -82,10 +89,17 @@ Make sure the server (http://localhost:3000) is running before sending requests.
 
 
 📝 .gitignore
-The following files/folders are ignored from version control:
 
-node_modules/
-.env
+This project includes a .gitignore file to exclude unnecessary files and folders from version control, such as:
+node_modules/ (dependencies)The following files/folders are ignored from version control:
+
+.node_modules
+
+.env files (environment variables)
+
+*.log files (logs)
+
+docker build files
 
 
 👤 Author
