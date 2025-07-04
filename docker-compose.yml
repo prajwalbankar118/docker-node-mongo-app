@@ -1,8 +1,8 @@
 services:
   backend:
-    build: ./backend
-    expose:
-      - "3000"
+    image: prajwalbankar118/docker-node-mongo-app  # use the image you pushed
+    ports:
+      - "3000:3000"
     depends_on:
       - mongo
 
